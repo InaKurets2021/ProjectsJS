@@ -1,0 +1,45 @@
+.container {
+	max-width: 40%;
+	margin: 2rem auto;
+	background: #fff;
+	padding: 0.5rem;
+}
+
+button {
+	background: none;
+	border: 1px solid rgb(105, 103, 235);
+	border-radius: 4px;
+	padding: 1.2rem 2.5rem;
+	font-size: 1rem;
+}
+
+button:hover {
+	background: rgb(205, 233, 233);
+}
+
+button:active {
+	background: rgb(136, 131, 131);
+	color: #fff;
+}
+
+.slider {
+	border: 2px solid rgb(121, 113, 113);
+	width: 31.25rem;
+	height: 31.25rem;
+	margin: 1.2rem auto;
+	overflow: hidden;
+}
+
+.slider__line {
+	width: 31.25rem;
+	height: 31.25rem;
+	display: flex;
+	position: relative;
+	left: 0;
+	transition: all ease 1s;
+}
+
+.slider__img {
+	width: 31.25rem;
+	height: 31.25rem;
+}
