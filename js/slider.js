@@ -19,7 +19,7 @@ const scrollPrev = () => {
     }
     sliderLine.style.left = -offset + 'px';
 };
- 
+
 const scrollNext = () => {
     offset += 500;
     prev.disabled = false;
