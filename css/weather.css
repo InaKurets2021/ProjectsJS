@@ -1,10 +1,9 @@
 .wrapper {
-	margin: 1rem auto;
-	padding: 2rem 0;
-	width: 31rem;
-	background: #fff;
+	box-shadow: .5rem .5rem 1.2rem var(--shadow);
+	padding: 1.5rem 0;
+	width: 28rem;
+	background: var(--white);
 	border-radius: .5rem;
-	box-shadow: .5rem.5rem 1.5rem rgba(0, 0, 0, 0.05);
 }
 
 .wrapper .input__part {
@@ -13,23 +12,6 @@
 
 .wrapper.active .input__part {
 	display: none;
-}
-
-.input__part .input__text {
-	display: none;
-	font-size: 1rem;
-	text-align: center;
-	padding: .7rem .6rem;
-	border-radius: .5rem;
-	margin-bottom: 1rem;
-}
-
-
-.input__part .input__text.pending {
-	color: #0c5460;
-	display: block;
-	background: #d1ecf1;
-	border: 1px solid #bee5eb;
 }
 
 .input__part :where(input, button) {
@@ -44,14 +26,14 @@
 .input__part input {
 	text-align: center;
 	padding: 0 1rem;
-	border: 1px solid #ccc;
+	border: 1px solid var(--card-border);
 }
 
 .input__part .separator {
 	height: 1px;
 	width: 100%;
 	margin: 1.5rem 0;
-	background: #ccc;
+	background: var(--card-border);
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -60,30 +42,30 @@
 
 .separator::before {
 	content: "or";
-	color: #b3b3b3;
+	color: var(gray);
 	font-size: 1.2rem;
 	padding: 0 1rem;
-	background: #fff;
+	background: var(--white);
 }
 
 .input__part button {
-	color: #fff;
+	color: var(--white);
 	cursor: pointer;
-	background: #43AFFC;
+	background: var(--blue);
 	transition: 0.3s ease;
 }
 
 .input__part button:hover {
-	background: #1d9ffc;
+	background: var(--blue);
 }
 
 .weather {
-	background-color: rgb(151, 209, 209);
-	border-radius: 0.6rem;
+	background-color: var(--citycolor);
+	border-radius: .6rem;
 	padding: 2rem;
 	max-width: 25rem;
 	margin: 0 auto;
-	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 .5rem var(--black);
 }
 
 .weather__loading {
@@ -128,7 +110,7 @@
 .weather__temp::after,
 .weather__feels-like::after {
 	display: inline-block;
-	margin-left: 0.5rem;
+	margin-left: .5rem;
 	content: "°C";
 }
 

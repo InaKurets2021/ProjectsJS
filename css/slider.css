@@ -1,38 +1,48 @@
 .container {
-	max-width: 40%;
 	margin: 2rem auto;
-	background: #fff;
-	padding: 0.5rem;
+	padding: 1.5rem 0;
+	width: 28rem;
+	background: var(--white);
+	border-radius: .5rem;
+	box-shadow: .5rem .5rem 1.2rem var(--shadow);
 }
 
-button {
+.slider__prev,
+.slider__next {
 	background: none;
-	border: 1px solid rgb(105, 103, 235);
-	border-radius: 4px;
+	border: 1px solid;
+	border-radius: 2px;
 	padding: 1.2rem 2.5rem;
 	font-size: 1rem;
+	cursor: pointer;
+	background: var(--blue);
+	transition: 0.3s ease;
+	border: none;
+	width: 6rem;
+	height: 3rem;
+	font-size: 1.5rem;
+	cursor: pointer;
+	padding: 3px 0;
+	margin: 1rem 1.5rem;
 }
 
 button:hover {
-	background: rgb(205, 233, 233);
-}
-
-button:active {
-	background: rgb(136, 131, 131);
-	color: #fff;
+	background: var(--shadow);
+	color: var(--white);
 }
 
 .slider {
-	border: 2px solid rgb(121, 113, 113);
-	width: 31.25rem;
-	height: 31.25rem;
+	border: 1px solid var(--shadow);
+	border-radius: 2px;
+	width: 25rem;
+	height: 25rem;
 	margin: 1.2rem auto;
 	overflow: hidden;
 }
 
 .slider__line {
-	width: 31.25rem;
-	height: 31.25rem;
+	width: 25rem;
+	height: 25rem;
 	display: flex;
 	position: relative;
 	left: 0;
@@ -40,6 +50,6 @@ button:active {
 }
 
 .slider__img {
-	width: 31.25rem;
-	height: 31.25rem;
+	width: 25rem;
+	height: 27rem;
 }

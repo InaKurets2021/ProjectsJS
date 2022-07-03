@@ -7,12 +7,12 @@ if (offset === 0) {
     prev.disabled = true;
 }
 
-if (offset === 2500) {
+if (offset === 2000) {
     next.disabled = true;
 }
 
 const scrollPrev = () => {
-    offset -= 500;
+    offset -= 400;
     next.disabled = false;
     if (offset === 0) {
         prev.disabled = true;
@@ -21,9 +21,9 @@ const scrollPrev = () => {
 };
 
 const scrollNext = () => {
-    offset += 500;
+    offset += 400;
     prev.disabled = false;
-    if (offset === 2500) {
+    if (offset === 2000) {
         next.disabled = true;
     }
     sliderLine.style.left = -offset + 'px';
