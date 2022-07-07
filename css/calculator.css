@@ -89,3 +89,12 @@
 	cursor: pointer;
 	margin: 1rem auto;
 }
+
+.form__calc {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.backspace {
+	width: 5rem;
+}
