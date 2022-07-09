@@ -15,6 +15,7 @@ const insert = (sum) => {
 	else if (sum === ".") {
 		mainInput.value = "0.";
 	}
+	
 	for (let i = 1; i < mainInput.value.length; i++) {
 		if (mainInput.value[i] === "-") {
 			fakeInput.value += mainInput.value;
@@ -32,7 +33,7 @@ const equally = () => {
 	let result = fakeInput.value + mainInput.value;
 	if (result) {
 		result = result.replace("--", "+");
-		mainInput.value = eval(result);
+		mainInput.value = eval(result).toFixed(5);
 	}
 	fakeInput.value = "";
 };
@@ -61,7 +62,7 @@ document.addEventListener("keydown", (event) => {
 		".",
 	];
 	if (values.includes(event.key)) {
-		insert(event.key)
+		sum(event.key) 
 	}
 	else if (event.key === "Backspace") {
 		deleteLastSymbol();
