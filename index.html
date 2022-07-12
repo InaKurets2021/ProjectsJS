@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ProjectJS</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="slider">
+			<div class="slider__line">
+				<img class="slider__img" src="./img/bugatti.jpg" alt="bugatti">
+				<img class="slider__img" src="./img/dodge.jpg" alt="dodge">
+				<img class="slider__img" src="./img/ferrari.jpg" alt="ferrari">
+				<img class="slider__img" src="./img/hammer.jpg" alt="hammer">
+				<img class="slider__img" src="./img/lamborghini.jpg" alt="lamborghini">
+				<img class="slider__img" src="./img/maserati.jpg" alt="maserati">
+			</div>
+		</div>
+		<button class="slider__prev">Prev</button>
+		<button class="slider__next">Next</button>
+	</div>
+
+
+	<div class="wrapper">
+		<section class="input__part">
+			<p class="input__text"></p>
+			<div class="input__content">
+				<input type="text" spellcheck="false" placeholder="Enter city name" required>
+				<div class="separator"></div>
+				<button>Get Device Location</button>
+			</div>
+		</section>
+		<div id="weather" class="weather"></div>
+
+
+	</div>
+	<div class="wrapper__calc">
+		<header>Calculator</header>
+		<section class="input__calc">
+			<p class="input__calc"></p>
+			<div class="input__calc">
+				<form name="calculator">
+					<input style="border: none;" value="" id="fakeInput" readonly">
+					<div class="form__calc">
+						<input class="calc" placeholder="Enter" value="" id="mainInput" name="textview" >
+						<td><input class="backspace" type="button" value="<" onclick="deleteLastSymbol()"></td>
+					</div>
+				</form>
+				<div class="separator"></div>
+				<table>
+					<tr>
+						<td><input class="button" type="button" value="7" onclick="insert(value)"></td>
+						<td><input class="button" type="button" value="8" onclick="insert(value)"></td>
+						<td><input class="button" type="button" value="9" onclick="insert(value)"></td>
+						<td><input class="button" type="button" value="/" onclick="insert(value)"></td>
+					</tr>
+					<tr>
+						<td><input class="button" type="button" value="4" onclick="insert(value)"></td>
+						<td><input class="button" type="button" value="5" onclick="insert(value)"></td>
+						<td><input class="button" type="button" value="6" onclick="insert(value)"></td>
+						<td><input class="button" type="button" value="*" onclick="insert(value)"></td>
+					</tr>
+					<tr>
+						<td><input class="button" type="button" value="1" onclick="insert(value)"></td>
+						<td><input class="button" type="button" value="2" onclick="insert(value)"></td>
+						<td><input class="button" type="button" value="3" onclick="insert(value)"></td>
+						<td><input class="button" type="button" value="+" onclick="insert(value)"></td>
+					</tr>
+					<tr>
+						<td><input class="button" type="button" value="C" onclick="clean()"></td>
+						<td><input class="button" type="button" value="0" onclick="insert(value)"></td>
+						<td><input class="button" type="button" id="point"  value="." onclick="insert(value)"></td>
+						<td><input class="button" type="button" value="-" onclick="insert(value)"></td>
+					</tr>
+					<tr>
+						<td colspan="4"><input class="buttonequall" type="button" value="=" onclick="equally()"></td>
+
+					</tr>
+				</table>
+		</section>
+	</div>
+	<script src="./js/slider.js"></script>
+	<script src="./js/weather.js"></script>
+	<script src="./js/calculacor.js"></script>
+</body>
+
+</html>
