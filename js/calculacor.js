@@ -1,5 +1,6 @@
 const fakeInput = document.querySelector("#fakeInput");
 const mainInput = document.querySelector("#mainInput");
+const point = document.querySelector("#point");
 
 
 const insert = (sum) => {
@@ -11,11 +12,16 @@ const insert = (sum) => {
 		fakeInput.value = mainInput.value;
 		mainInput.value = "";
 	}
-
-	else if (sum === ".") {
+	else if (mainInput.value === ".") {
 		mainInput.value = "0.";
 	}
-	
+	else if (mainInput.value.includes(".")) {
+		point.setAttribute("disabled", "disabled")
+	} else {
+		point.removeAttribute("disabled")
+	}
+
+
 	for (let i = 1; i < mainInput.value.length; i++) {
 		if (mainInput.value[i] === "-") {
 			fakeInput.value += mainInput.value;
@@ -62,7 +68,7 @@ document.addEventListener("keydown", (event) => {
 		".",
 	];
 	if (values.includes(event.key)) {
-		sum(event.key) 
+		sum(event.key)
 	}
 	else if (event.key === "Backspace") {
 		deleteLastSymbol();

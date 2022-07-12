@@ -46,7 +46,7 @@
 				<form name="calculator">
 					<input style="border: none;" value="" id="fakeInput" readonly">
 					<div class="form__calc">
-						<input class="calc" placeholder="Enter" value="" id="mainInput" name="textview">
+						<input class="calc" placeholder="Enter" value="" id="mainInput" name="textview" >
 						<td><input class="backspace" type="button" value="<" onclick="deleteLastSymbol()"></td>
 					</div>
 				</form>
@@ -73,7 +73,7 @@
 					<tr>
 						<td><input class="button" type="button" value="C" onclick="clean()"></td>
 						<td><input class="button" type="button" value="0" onclick="insert(value)"></td>
-						<td><input class="button" type="button" value="." onclick="insert(value)"></td>
+						<td><input class="button" type="button" id="point"  value="." onclick="insert(value)"></td>
 						<td><input class="button" type="button" value="-" onclick="insert(value)"></td>
 					</tr>
 					<tr>
