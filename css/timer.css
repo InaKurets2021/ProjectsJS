@@ -1,0 +1,79 @@
+.wrapper {
+  box-shadow: .5rem .5rem 1.2rem var(--shadow);
+  padding: 1.5rem 0;
+  width: 28rem;
+  background: var(--white);
+  border-radius: .5rem;
+  height: 32.5rem;
+}
+
+.timer__menu {
+  display: flex;
+  gap: 1rem;
+}
+
+
+.timer__logo {
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.timer__links {
+  font-size: 1.2rem;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.timer__link {
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  cursor: pointer;
+  background: var(--blue);
+  transition: 0.3s ease;
+  width: 6rem;
+}
+
+.timer__link:hover {
+  background: var(--blue);
+}
+
+.timer__block {
+  color: var(--blue);
+  text-align: center;
+  width: 18rem;
+  height: 18rem;
+  border: 5px solid var(--blue);
+  border-radius: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5rem;
+  margin: 0 auto;
+}
+
+
+.timer__buttons {
+  display: flex;
+}
+
+.timer__button_stop,
+.timer__button_start {
+  border: none;
+  font-size: 1.2rem;
+  color: var(--white);
+  cursor: pointer;
+  background: var(--blue);
+  transition: 0.3s ease;
+  width: 10rem;
+  height: 3rem;
+  text-align: center;
+  justify-content: center;
+  padding: 0.8rem;
+  margin: 0.5rem 3rem;
+}
+
+.timer__button:hover {
+  background: var(--blue);
+}

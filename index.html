@@ -8,8 +8,9 @@
 	<link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body onload="template()">
 	<div class="container">
+		<header>Slider</header>
 		<div class="slider">
 			<div class="slider__line">
 				<img class="slider__img" src="./img/bugatti.jpg" alt="bugatti">
@@ -26,6 +27,7 @@
 
 
 	<div class="wrapper">
+		<header>Weather</header>
 		<section class="input__part">
 			<p class="input__text"></p>
 			<div class="input__content">
@@ -35,18 +37,17 @@
 			</div>
 		</section>
 		<div id="weather" class="weather"></div>
-
-
 	</div>
+
 	<div class="wrapper__calc">
 		<header>Calculator</header>
 		<section class="input__calc">
 			<p class="input__calc"></p>
 			<div class="input__calc">
 				<form name="calculator">
-					<input style="border: none;" value="" id="fakeInput" readonly">
+					<input style="border: none;" value="" id="fakeInput" readonly>
 					<div class="form__calc">
-						<input class="calc" placeholder="Enter" value="" id="mainInput" name="textview" >
+						<input class="calc" placeholder="Enter" value="" id="mainInput" name="textview" readonly>
 						<td><input class="backspace" type="button" value="<" onclick="deleteLastSymbol()"></td>
 					</div>
 				</form>
@@ -73,7 +74,7 @@
 					<tr>
 						<td><input class="button" type="button" value="C" onclick="clean()"></td>
 						<td><input class="button" type="button" value="0" onclick="insert(value)"></td>
-						<td><input class="button" type="button" id="point"  value="." onclick="insert(value)"></td>
+						<td><input class="button" type="button" id="point" value="." onclick="insert(value)"></td>
 						<td><input class="button" type="button" value="-" onclick="insert(value)"></td>
 					</tr>
 					<tr>
@@ -83,9 +84,40 @@
 				</table>
 		</section>
 	</div>
+
+	<div class="wrapper">
+		<header>Timer</header>
+		<div class="timer__menu">
+			<div class="timer__logo">
+				<img src="./img/construction_project_plan_building_architect_design_develop-57_icon-icons.com_60216.png"
+					alt="setting">
+			</div>
+			<div class="timer__links">
+				<button class="timer__link" onclick="start()">Timer</button>
+				<button class="timer__link" onclick="short()">Short break</button>
+				<button class="timer__link" onclick="long()">Long break</button>
+			</div>
+
+		</div>
+
+		<div class="timer__block">
+			<div class="time__minute" id="minutes"></div>
+			<div class="time__time">:</div>
+			<div class="time__second" id="seconds"></div>
+
+
+		</div>
+		<div class="timer__buttons">
+			<div class="timer__button_start" onclick="start()">Start</div>
+			<div class="timer__button_stop" onclick="stop()">Stop</div>
+		</div>
+	</div>
+
+	</div>
 	<script src="./js/slider.js"></script>
 	<script src="./js/weather.js"></script>
 	<script src="./js/calculacor.js"></script>
+	<script src="./js/timer.js"></script>
 </body>
 
 </html>

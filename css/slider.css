@@ -1,10 +1,19 @@
 .container {
-	margin: 2rem auto;
-	padding: 1.5rem 0;
+	margin: 1rem auto;
+	padding: 1.2rem 0;
 	width: 28rem;
 	background: var(--white);
 	border-radius: .5rem;
 	box-shadow: .5rem .5rem 1.2rem var(--shadow);
+}
+header {
+	display: flex;
+	font-size: 1.5rem;
+	font-weight: 500;
+	color: var(--blue);
+	padding: 1rem 1rem;
+	align-items: center;
+	border-bottom: 1px solid var(--card-border);
 }
 
 .slider__prev,
@@ -35,7 +44,7 @@ button:hover {
 	border: 1px solid var(--shadow);
 	border-radius: 2px;
 	width: 25rem;
-	height: 25rem;
+	height: 19rem;
 	margin: 1.2rem auto;
 	overflow: hidden;
 }
@@ -51,5 +60,5 @@ button:hover {
 
 .slider__img {
 	width: 25rem;
-	height: 27rem;
+	height: 19rem;
 }

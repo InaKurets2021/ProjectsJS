@@ -68,7 +68,7 @@ document.addEventListener("keydown", (event) => {
 		".",
 	];
 	if (values.includes(event.key)) {
-		sum(event.key)
+		insert(event.key)
 	}
 	else if (event.key === "Backspace") {
 		deleteLastSymbol();

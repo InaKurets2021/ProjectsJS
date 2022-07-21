@@ -1,6 +1,7 @@
 @import url(./slider.css);
 @import url(./weather.css);
 @import url(./calculator.css);
+@import url(./timer.css);
 
 * {
 	margin: 0 auto;
