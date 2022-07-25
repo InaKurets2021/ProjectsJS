@@ -12,9 +12,7 @@
   gap: 1rem;
 }
 
-
 .timer__logo {
-  cursor: pointer;
   padding: 1rem;
 }
 
@@ -25,8 +23,9 @@
   padding: 1rem;
 }
 
-.timer__link, 
-.timer__long {
+.timer__timer,
+.timer__long,
+.timer__short {
   border: none;
   font-size: 1rem;
   color: var(--white);
@@ -61,14 +60,11 @@
   margin: 0 auto;
   font-size: 2rem;
   padding: 1rem 0 3rem 0;
-    
 }
-
 
 .timer__buttons {
   display: flex;
- 
-  }
+}
 
 .timer__button_stop,
 .timer__button_start,
@@ -80,10 +76,10 @@
   background: var(--blue);
   transition: 0.3s ease;
   width: 15rem;
-  height: 3rem;
+  height: 2.5rem;
   text-align: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 0.5rem;
   margin: 1rem 1rem;
 }
 

@@ -1,12 +1,15 @@
 let minutes = document.querySelector('.min');
 let seconds = document.querySelector('.sec');
-let result = document.querySelector('.result'); 
+let result = document.querySelector('.result');
 
 let startBtn = document.querySelector('.timer__button_start');
 let pauseBtn = document.querySelector('.timer__button_pause');
 let stopBtn = document.querySelector('.timer__button_stop');
 
+
 let long = document.querySelector('.timer__long ');
+let short = document.querySelector('.timer__short');
+let timerTimer = document.querySelector('.timer__timer')
 
 
 let click = new Audio("bell-sound.mp3");
@@ -49,7 +52,7 @@ const pauseTimer = () => {
 };
 
 const resetTimer = () => {
-	click.play();
+  click.play();
   clearInterval(timer);
   minutes.value = null;
   seconds.value = null;
@@ -57,8 +60,7 @@ const resetTimer = () => {
   minutes.removeAttribute("disabled");
   seconds.removeAttribute("disabled");
   startBtn.removeAttribute("disabled");
-	pauseBtn.removeAttribute("disabled");
-	
+  pauseBtn.removeAttribute("disabled");
 };
 
 const setResult = () => {
@@ -77,28 +79,75 @@ const isFinished = () => {
   }
 };
 
-startBtn.addEventListener("click", startTimer);
-pauseBtn.addEventListener("click", pauseTimer);
-stopBtn.addEventListener("click", resetTimer);
-long.addEventListener("click", longBreak);
-
-
+// перерывы 
 const longBreak = () => {
 
-  result.innerHTML = "15 : 59";
-  minutes = 15;
-  seconds = 59;
-  
+  result.innerHTML = "14 : 59";
+  minutes.value = 14;
+  seconds.value = 59;
 
   if (+minutes.value <= 0 || +seconds.value <= 0) {
     alert("Неверные значения");
     minutes.value = null;
     seconds.value = null;
     result.innerHTML = "00 : 00";
+    click.play();
     return;
   }
   timer = setInterval(workTimer, 1000);
   minutes.setAttribute("disabled", "disabled");
   seconds.setAttribute("disabled", "disabled");
-
+  startBtn.removeAttribute("disabled");
+  pauseBtn.removeAttribute("disabled");
 };
+
+const shortBreak = () => {
+  result.innerHTML = "04 : 59";
+  minutes.value = 04;
+  seconds.value = 59;
+
+  if (+minutes.value <= 0 || +seconds.value <= 0) {
+    alert("Неверные значения");
+    minutes.value = null;
+    seconds.value = null;
+    result.innerHTML = "00 : 00";
+    click.play();
+    return;
+  }
+  timer = setInterval(workTimer, 1000);
+  minutes.setAttribute("disabled", "disabled");
+  seconds.setAttribute("disabled", "disabled");
+  startBtn.removeAttribute("disabled");
+  pauseBtn.removeAttribute("disabled");
+};
+
+const timerAuto = () => {
+  result.innerHTML = "24 : 59";
+  minutes.value = 24;
+  seconds.value = 59;
+
+  if (+minutes.value <= 0 || +seconds.value <= 0) {
+    alert("Неверные значения");
+    minutes.value = null;
+    seconds.value = null;
+    result.innerHTML = "00 : 00";
+    click.play();
+    return;
+  }
+  timer = setInterval(workTimer, 1000);
+  minutes.setAttribute("disabled", "disabled");
+  seconds.setAttribute("disabled", "disabled");
+  startBtn.removeAttribute("disabled");
+  pauseBtn.removeAttribute("disabled");
+};
+
+startBtn.addEventListener("click", startTimer);
+pauseBtn.addEventListener("click", pauseTimer);
+stopBtn.addEventListener("click", resetTimer);
+long.addEventListener("click", longBreak);
+short.addEventListener("click", shortBreak);
+timerTimer.addEventListener("click", timerAuto);
+
+
+
+
