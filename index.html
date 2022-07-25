@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body onload="template()">
+<body>
 	<div class="container">
 		<header>Slider</header>
 		<div class="slider">
@@ -95,21 +95,25 @@
 			<div class="timer__links">
 				<button class="timer__link" onclick="start()">Timer</button>
 				<button class="timer__link" onclick="short()">Short break</button>
-				<button class="timer__link" onclick="long()">Long break</button>
+				<button class="timer__long">Long break</button>
 			</div>
 
 		</div>
 
 		<div class="timer__block">
-			<div class="time__minute" id="minutes"></div>
+			<div class="inputs">
+			<input type="number" min="0" max="59" placeholder="min" class="min" />
 			<div class="time__time">:</div>
-			<div class="time__second" id="seconds"></div>
+			<input type="number" min="0" max="59" placeholder="sec" class="sec" />
+</div>
 
-
+			<p class="result">00 : 00</p>
 		</div>
+		
 		<div class="timer__buttons">
-			<div class="timer__button_start" onclick="start()">Start</div>
-			<div class="timer__button_stop" onclick="stop()">Stop</div>
+			<div class="timer__button_start">Start</div>
+			<div class="timer__button_pause">Pause</div>
+			<div class="timer__button_stop" >Stop</div>
 		</div>
 	</div>
 
