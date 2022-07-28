@@ -3,8 +3,8 @@ import "./slider";
 import "./timer";
 import "./weather";
 
-// html
-import "/index.html";
+// html следим за обновлениями
+import "./index.html";
 
 // scss
-import "../css/style.css";
+import "../css/style.scss";
