@@ -11,7 +11,10 @@ module.exports = {
 		filename: 'bundle.js',
 		assetModuleFilename: "assets/[name][ext]",
 	},
-
+	mode: "development",
+  devServer: {
+    port: 4200,
+  },
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: path.resolve(__dirname, './index.html'),
@@ -28,8 +31,8 @@ module.exports = {
 				loader: "html-loader",
 			},
 			{
-				test: /\.(c|sa|sc)css$/i,
-				use: [MiniCssExtractPlugin.loader, "style-loader", "css-loader", 'sass-loader'],
+				test: /.s[ac]ss$/i,
+				use: [MiniCssExtractPlugin.loader, "css-loader", 'sass-loader'],
 			},
 			{ 
         test: /\.(svg|ico|png|webp|jpg|gif|jpeg)$/, 

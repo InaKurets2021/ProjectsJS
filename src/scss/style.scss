@@ -1,0 +1,28 @@
+@import "./slider.scss";
+@import "./weather.scss";
+@import "./calculator.scss";
+@import "./timer.scss";
+
+* {
+	margin: 0 auto;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	background: var(--blue);
+}
+
+:root {
+	--white: #ffffff;
+	--blue: #43AFFC;
+	--card-border: #ccc;
+	--shadow: rgb(105, 103, 235);
+	--gray: #b3b3b3;
+	--citycolor: rgb(151, 209, 209);
+	--black: rgba(0, 0, 0, 0.3);
+}
