@@ -4,95 +4,95 @@
 	border-radius: .5rem;
 	padding: 1rem 0;
 	box-shadow: .5rem .5rem 1.2rem var(--shadow);
-}
 
-.wrapper__calc header {
-	display: flex;
-	font-size: 1.5rem;
-	font-weight: 500;
-	color: var(--blue);
-	padding: 1rem 1rem;
-	align-items: center;
-	border-bottom: 1px solid var(--card-border);
+	header {
+		display: flex;
+		font-size: 1.5rem;
+		font-weight: 500;
+		color: var(--blue);
+		padding: 1rem 1rem;
+		align-items: center;
+		border-bottom: 1px solid var(--card-border);
+	}
 }
 
 .input__calc {
 	margin: 1rem;
-}
 
-.input__calc :where(input, button) {
-	width: 100%;
-	height: 2.6rem;
-	border: none;
-	outline: none;
-	font-size: 1.2rem;
-	border-radius: .5rem;
-	text-align: center;
-}
+	&:where(input, button) {
+		width: 100%;
+		height: 2.6rem;
+		border: none;
+		outline: none;
+		font-size: 1.2rem;
+		border-radius: .5rem;
+		text-align: center;
+	}
 
-.input__calc input {
-	text-align: center;
-	padding: 0.5rem;
-	border: 1px solid var(--card-border);
-}
+	input {
+		text-align: center;
+		padding: 0.5rem;
+		border: 1px solid var(--card-border);
 
-.input__calc input:is(:focus, :valid) {
-	border: 2px solid var(--blue);
-}
+		&:is(:focus, :valid) {
+			border: 2px solid var(--blue);
+		}
+	}
 
-.input__calc .separator {
-	height: 1px;
-	width: 100%;
-	margin: 1.5rem 0;
-	background: var(--card-border);
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
+	button {
+		color: var(--white);
+		cursor: pointer;
+		background: var(--blue);
+		transition: 0.3s ease;
+		border: none;
+		width: 5.3rem;
+		height: 3rem;
+		font-size: 1.5rem;
+		margin: 1px;
+		cursor: pointer;
+		padding: 3px 0;
 
-.separator::before {
-	content: "or";
-	color: var(--gray);
-	font-size: 1.2rem;
-	padding: 0 1rem;
-	background: var(--white);
-}
+		&:hover {
+			background: var(--blue);
+		}
+	}
 
-.input__calc button {
-	color: var(--white);
-	cursor: pointer;
-	background: var(--blue);
-	transition: 0.3s ease;
-	border: none;
-	width: 5.3rem;
-	height: 3rem;
-	font-size: 1.5rem;
-	margin: 1px;
-	cursor: pointer;
-	padding: 3px 0;
-}
+	.separator {
+		height: 1px;
+		width: 100%;
+		margin: 1.5rem 0;
+		background: var(--card-border);
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-.input__calc button:hover {
-	background: var(--blue);
-}
+		&:before {
+			content: "or";
+			color: var(--gray);
+			font-size: 1.2rem;
+			padding: 0 1rem;
+			background: var(--white);
+		}
+	}
 
-.buttonequall {
-	color: var(--white);
-	cursor: pointer;
-	background: var(--blue);
-	transition: 0.3s ease;
-	border: none;
-	width: 22rem;
-	height: 3.3rem;
-	font-size: 1.5rem;
-	cursor: pointer;
-	margin: 1rem auto;
-}
+	.buttonequall {
+		color: var(--white);
+		cursor: pointer;
+		background: var(--blue);
+		transition: 0.3s ease;
+		border: none;
+		width: 22rem;
+		height: 3.3rem;
+		font-size: 1.5rem;
+		cursor: pointer;
+		margin: 1rem auto;
+	}
 
-.form__calc {
-	display: flex;
-	gap: 0.5rem;
+	.form__calc {
+		display: flex;
+		gap: 0.5rem;
+	}
 }
 
 .backspace {

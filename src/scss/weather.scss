@@ -4,60 +4,61 @@
 	width: 28rem;
 	background: var(--white);
 	border-radius: .5rem;
+
+	.input__part {
+		margin: 1rem;
+
+		&:where(input, button) {
+			width: 100%;
+			height: 2.5rem;
+			border: none;
+			outline: none;
+			font-size: 1rem;
+			border-radius: .5rem;
+		}
+
+		input {
+			text-align: center;
+			padding: 0 1rem;
+			border: 1px solid var(--card-border);
+		}
+
+		.separator {
+			height: 1px;
+			width: 100%;
+			margin: 1rem 0;
+			background: var(--card-border);
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&:before {
+				content: "or";
+				color: var(gray);
+				font-size: 1.2rem;
+				padding: 0 1rem;
+				background: var(--white);
+			}
+		}
+
+		.active .input__part {
+			display: none;
+		}
+
+		button {
+			color: var(--white);
+			cursor: pointer;
+			background: var(--blue);
+			transition: 0.3s ease;
+
+			&:hover {
+				background: var(--blue);
+			}
+		}
+	}
 }
 
-.wrapper .input__part {
-	margin: 1rem;
-}
-
-.wrapper.active .input__part {
-	display: none;
-}
-
-.input__part :where(input, button) {
-	width: 100%;
-	height: 2.5rem;
-	border: none;
-	outline: none;
-	font-size: 1rem;
-	border-radius: .5rem;
-}
-
-.input__part input {
-	text-align: center;
-	padding: 0 1rem;
-	border: 1px solid var(--card-border);
-}
-
-.input__part .separator {
-	height: 1px;
-	width: 100%;
-	margin: 1rem 0;
-	background: var(--card-border);
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.separator::before {
-	content: "or";
-	color: var(gray);
-	font-size: 1.2rem;
-	padding: 0 1rem;
-	background: var(--white);
-}
-
-.input__part button {
-	color: var(--white);
-	cursor: pointer;
-	background: var(--blue);
-	transition: 0.3s ease;
-}
-
-.input__part button:hover {
-	background: var(--blue);
-}
 
 .weather {
 	background-color: var(--citycolor);
@@ -72,11 +73,12 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	img {
+		max-width: 3rem;
+	}
 }
 
-.weather__loading img {
-	max-width: 3rem;
-}
 
 .weather__header {
 	display: flex;
@@ -101,17 +103,24 @@
 	font-size: 3rem;
 	font-weight: 700;
 	margin-bottom: 1rem;
+
+	&:after {
+		display: inline-block;
+		margin-left: .5rem;
+		content: "°C";
+		width: 2rem;
+	}
 }
 
 .weather__feels-like {
 	font-size: 1.5rem;
-}
+	width: 2rem;
 
-.weather__temp::after,
-.weather__feels-like::after {
-	display: inline-block;
-	margin-left: .5rem;
-	content: "°C";
+	&:after {
+		display: inline-block;
+		margin-left: .5rem;
+		content: "°C";
+	}
 }
 
 .weather__icon {
