@@ -1,4 +1,4 @@
-@import "nullstyle.css";
+@import "./nullstyle.scss";
 @import "./slider.scss";
 @import "./weather.scss";
 @import "./calculator.scss";
@@ -11,11 +11,11 @@
 }
 
 body {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: center;
-		background: var(--blue);
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	background: var(--blue);
 }
 
 :root {
