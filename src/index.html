@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Projects JS</title>
+  </head>
+
+  <body>
+    <div class="applications">
+      <!-- SLIDER -->
+      <section class="slider-app">
+        <h2 class="section-title">Slider</h2>
+        <div class="slider">
+          <div class="slider__line">
+            <img class="slider__img" src="./img/bugatti.jpg" alt="bugatti" />
+            <img class="slider__img" src="./img/dodge.jpg" alt="dodge" />
+            <img class="slider__img" src="./img/Ferrari.jpg" alt="ferrari" />
+            <img class="slider__img" src="./img/hammer.jpg" alt="hammer" />
+            <img
+              class="slider__img"
+              src="./img/lamborghini.jpg"
+              alt="lamborghini"
+            />
+            <img class="slider__img" src="./img/Maserati.jpg" alt="maserati" />
+          </div>
+        </div>
+        <button class="slider-prev" disabled>Prev</button>
+        <button class="slider-next">Next</button>
+      </section>
+      <!-- WEATHER -->
+      <section class="weather-app">
+        <h2 class="section-title">Weather</h2>
+        <div class="weather">
+          <div class="weather__content">
+            <input
+              class="weather__input"
+              type="text"
+              spellcheck="false"
+              placeholder="Enter city name"
+              required
+            />
+            <div class="separator"></div>
+            <button class="weather__btn">Get Device Location</button>
+          </div>
+          <div id="weather" class="weather-result"></div>
+        </div>
+      </section>
+      <!-- CALCULATOR -->
+      <section class="calc-app">
+        <h2 class="section-title">Calculator</h2>
+        <div class="calc">
+          <form name="calc__form">
+            <input
+              class="calc__input-fake"
+              style="border: none"
+              value=""
+              id="fakeInput"
+              readonly
+            />
+            <div class="calc__wrap">
+              <input
+                class="calc__input-main"
+                placeholder="0"
+                value=""
+                id="mainInput"
+                name="textview"
+                readonly
+              />
+              <input
+                class="backspace calc__button--clean-one"
+                type="button"
+                value="<"
+              />
+            </div>
+          </form>
+          <div class="separator"></div>
+          <table>
+            <tr>
+              <td>
+                <input class="calc__button num" type="button" value="7" />
+              </td>
+              <td>
+                <input class="calc__button num" type="button" value="8" />
+              </td>
+              <td>
+                <input class="calc__button num" type="button" value="9" />
+              </td>
+              <td>
+                <input class="calc__button operator" type="button" value="/" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input class="calc__button num" type="button" value="4" />
+              </td>
+              <td>
+                <input class="calc__button num" type="button" value="5" />
+              </td>
+              <td>
+                <input class="calc__button num" type="button" value="6" />
+              </td>
+              <td>
+                <input class="calc__button operator" type="button" value="*" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input class="calc__button num" type="button" value="1" />
+              </td>
+              <td>
+                <input class="calc__button num" type="button" value="2" />
+              </td>
+              <td>
+                <input class="calc__button num" type="button" value="3" />
+              </td>
+              <td>
+                <input class="calc__button operator" type="button" value="+" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input
+                  class="calc__button calc__button--clean"
+                  type="button"
+                  value="C"
+                />
+              </td>
+              <td>
+                <input class="calc__button num" type="button" value="0" />
+              </td>
+              <td>
+                <input
+                  class="calc__button num"
+                  type="button"
+                  id="point"
+                  value="."
+                />
+              </td>
+              <td>
+                <input class="calc__button operator" type="button" value="-" />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="4">
+                <input
+                  class="calc__button eql buttonequall"
+                  type="button"
+                  value="="
+                />
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <!-- TIMER -->
+      <section class="timer-app">
+        <h2 class="section-title">Timer</h2>
+        <div class="timer">
+          <div class="timer__logo">
+            <img src="./img/alarmclockflat_106001.png" alt="time" />
+          </div>
+          <div class="timer__settings settings">
+            <button class="settings__btn active">Timer</button>
+            <button class="settings__btn">Short break</button>
+            <button class="settings__btn">Long break</button>
+          </div>
+        </div>
+        <div class="timer-app__content">
+          <div class="timer-app__inputs inputs-timer active">
+            <input
+              class="inputs-timer__min"
+              type="number"
+              min="0"
+              max="59"
+              placeholder="min"
+              value="1"
+            />
+            <div class="inputs-timer__separator">:</div>
+            <input
+              class="inputs-timer__sec"
+              type="number"
+              min="0"
+              max="59"
+              placeholder="sec"
+              value="1"
+            />
+          </div>
+          <div class="timer-app__inputs inputs-break">
+            <input
+              class="inputs-break__min"
+              type="number"
+              min="0"
+              max="59"
+              placeholder="min"
+              value="2"
+            />
+            <div class="inputs-break__separator">:</div>
+            <input
+              type="number"
+              min="0"
+              max="59"
+              placeholder="sec"
+              class="inputs-break__sec"
+              value="2"
+            />
+          </div>
+          <div class="timer-app__inputs inputs-long">
+            <input
+              type="number"
+              min="0"
+              max="59"
+              placeholder="min"
+              class="inputs-long__min"
+              value="3"
+            />
+            <div class="inputs-long__separator">:</div>
+            <input
+              type="number"
+              min="0"
+              max="59"
+              placeholder="sec"
+              class="inputs-long__sec"
+              value="3"
+            />
+          </div>
+          <p class="result">
+            <span class="result__minutes">00</span> :
+            <span class="result__seconds">00</span>
+          </p>
+        </div>
+        <div class="timer-app__buttons timer-buttons">
+          <button class="timer-buttons__start">Start</button>
+          <button class="timer-buttons__pause">Pause</button>
+          <button class="timer-buttons__stop">Stop</button>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
