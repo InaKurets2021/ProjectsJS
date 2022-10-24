@@ -1,0 +1,93 @@
+.timer-app {
+  box-shadow: 0.5rem 0.5rem 1.2rem var(--shadow);
+  padding: 1.2rem 0;
+  background: var(--white);
+  border-radius: 0.5rem;
+}
+.timer {
+  display: flex;
+  @media (max-width: 720px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.timer__logo {
+  padding: 1rem;
+}
+.timer__settings {
+  font-size: 1.2rem;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+.settings__btn {
+  border: none;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  background: #43affc;
+  transition: 0.3s ease;
+  width: 6rem;
+  &.active,
+  &:hover {
+    background-color: var(--shadow);
+  }
+}
+.timer-app__content {
+  color: var(--blue);
+  text-align: center;
+  width: 18rem;
+  height: 18rem;
+  border: 5px solid var(--blue);
+  border-radius: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 2.5rem;
+}
+.timer-app__inputs {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 2rem;
+  padding: 1rem 0 3rem 0;
+  &.active {
+    display: flex;
+  }
+  input {
+    text-align: center;
+    padding: 0.4rem;
+    border: none;
+    border: 1px solid var(--card-border);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+  }
+}
+.inputs-timer__separator,
+.inputs-break__separator,
+.inputs-long__separator {
+  margin: 0 1rem;
+}
+.timer-app__buttons {
+  display: flex;
+  padding: 0 1.5rem;
+}
+.timer-buttons__stop,
+.timer-buttons__start,
+.timer-buttons__pause {
+  border: none;
+  font-size: 1.2rem;
+  color: var(--white);
+  cursor: pointer;
+  background: var(--blue);
+  transition: 0.3s ease;
+  width: 15rem;
+  padding: 0.6rem;
+  margin: 1rem 1rem;
+  &:hover {
+    background-color: var(--shadow);
+  }
+}

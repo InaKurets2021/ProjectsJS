@@ -1,0 +1,52 @@
+@import "./nullstyle.scss";
+@import "./vars.scss";
+@import "./slider.scss";
+@import "./weather.scss";
+@import "./calculator.scss";
+@import "./timer.scss";
+
+html {
+  font-size: 16px;
+  @media (max-width: 1900px) {
+    font-size: 14px;
+  }
+  @media (max-width: 1700px) {
+    font-size: 12px;
+  }
+}
+body {
+  font-size: 1rem;
+  background: var(--blue);
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+.applications {
+  // max-width: 1440px;
+  display: grid;
+  grid-template-columns: repeat(4, 28rem);
+  gap: 1.5rem;
+  padding: 2rem;
+
+  @media (max-width: 1420px) {
+    grid-template-columns: repeat(3, 28rem);
+    justify-content: center;
+    gap: 3rem;
+  }
+  @media (max-width: 1100px) {
+    grid-template-columns: repeat(2, 28rem);
+    justify-content: center;
+  }
+  @media (max-width: 720px) {
+    grid-template-columns: repeat(1, 26rem);
+  }
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--blue);
+  padding: 1rem 1rem;
+  align-items: center;
+  border-bottom: 1px solid var(--card-border);
+}
