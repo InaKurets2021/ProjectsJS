@@ -23,9 +23,9 @@
 .settings__btn {
   border: none;
   font-size: 1rem;
-  color: #fff;
+  color: var(--white);
   cursor: pointer;
-  background: #43affc;
+  background: var(--blue);
   transition: 0.3s ease;
   width: 6rem;
   &.active,
