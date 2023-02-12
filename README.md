@@ -11,14 +11,34 @@
 - HTML
 - SCSS
 - JS
+- Webpack
+- DOM
+- API
 
 ### Реализовано в проекте:
+
+- Слайдер
+- Погода
+- Калькулятор
+- Таймер
+
+
+
+### Stack:
+
+- HTML
+- SCSS
+- JS
+- Webpack
+- DOM
+- API
+
+### Implemented in the project:
 
 - Slider
 - Weather
 - Calculator
 - Timer
-
 
 ### Демо сайта:
 
